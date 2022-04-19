@@ -31,7 +31,7 @@ parser.add_option('-f', '--file_name',type='str',help='filename',default='202204
 
 (options, args) = parser.parse_args()
 ind=int(options.index)
-file_name=int(options.file_names)
+file_name=int(options.file_name)
 
 
 if i>=0:

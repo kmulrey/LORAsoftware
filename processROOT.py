@@ -34,7 +34,7 @@ ind=int(options.index)
 file_name=str(options.file_name)
 
 
-if i>=0:
+if ind>=0:
     fp = open('event_list.txt','r')
     for i, line in enumerate(fp):
         if i == ind:

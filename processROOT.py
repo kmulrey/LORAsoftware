@@ -22,26 +22,25 @@ from optparse import OptionParser
 
 outputdir='/vol/astro7/lofar/kmulrey/LORAsoftware/testOutput/'
 path='/vol/astro5/lofar/vhecr/lora_triggered/LORAraw/'
-path2='new_files/'
+path2='/vol/astro7/lofar/kmulrey/LORAsoftware/npz_files/'
 
 
 parser = OptionParser()
-#parser.add_option('-f', '--file',type='str',help='filename',default=0)
-parser.add_option('-i', '--index',type='int',help='filename',default=0)
+parser.add_option('-i', '--index',type='int',help='filename_index',default=-1)
+parser.add_option('-f', '--file_name',type='str',help='filename',default='20220415_0040')
 
 (options, args) = parser.parse_args()
-#file_name=str(options.file)
 ind=int(options.index)
+file_name=int(options.file_names)
 
-#event_file=open('event_list.txt','r')
-#events=np.genfromtxt(event_file)
-#file_name=events[ind]
-fp = open('event_list.txt','r')
-for i, line in enumerate(fp):
-    if i == ind:
-        file_name=line.strip()
-        break
-fp.close()
+
+if i>=0:
+    fp = open('event_list.txt','r')
+    for i, line in enumerate(fp):
+        if i == ind:
+            file_name=line.strip()
+            break
+    fp.close()
 
 
 #file_name='20200302_0051'

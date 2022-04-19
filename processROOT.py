@@ -56,9 +56,6 @@ print(tfile)
 
 data={}
 
-outfile = open(file,"wb")
-pickle.dump(data,outfile)
-outfile.close()
 
 
 
@@ -95,7 +92,7 @@ def get_entry(br,key,n):
 
 
 # read root data and save .p file
-def process_and_save(tfile):
+def process_and_save(tfile,file):
     print (tfile)
     pklfile='new_files/'+ os.path.basename(tfile).split('.root')[0]+'.npz'
     if os.path.exists(pklfile):
@@ -164,3 +161,9 @@ def process_and_save(tfile):
     #print (len(data_new['Waveform_Raw']), len(data_new['Charge_Corrected']))
 
     all_data={'data_config':data_new_config,'data_log':data_new_log,'data_event':data_new_event,'data_osm_hisparc':data_new_osm_hisparc,'data_header':data_new_header,'data_osm_aera':data_new_osm_aera}
+    outfile = open(file,"wb")
+    pickle.dump(all_data,outfile)
+    outfile.close()
+
+
+process_and_save(tfile,file)

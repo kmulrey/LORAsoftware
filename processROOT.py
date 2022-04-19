@@ -56,9 +56,9 @@ print(tfile)
 
 data={}
 
-outfile = open(tfile,"wb")
+outfile = open(file,"wb")
 pickle.dump(data,outfile)
-
+outfile.close()
 
 
 

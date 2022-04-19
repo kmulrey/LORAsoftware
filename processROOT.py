@@ -20,8 +20,8 @@ import process_V2
 
 
 
-outputdir='/vol/astro3/lofar/lora/testOutput/'
-path='/vol/astro3/lofar/vhecr/lora_triggered/LORAraw/'
+outputdir='/vol/astro7/lofar/kmulrey/LORAsoftware/testOutput/'
+path='/vol/astro5/lofar/vhecr/lora_triggered/LORAraw/'
 path2='new_files/'
 
 
@@ -48,7 +48,7 @@ fp.close()
 file=path2+file_name+'.npz'
 print(file)
 
-
+'''
 d = joblib.load(file)
 
 log_data= d['data_log']
@@ -82,3 +82,4 @@ for i in np.arange(len(process_list)):
         process_V2.runEvent(eventID,log_data,config_data,header_data,osm_data_hisparc,osm_data_aera,event_data,file_name)
     except:
         print('{0} failed'.format(eventID))
+'''
